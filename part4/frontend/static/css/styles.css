@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  /* make content full to screen */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+
+  background-color: white;
+  padding: 6px 16px;
+}
+
+.header-container {
+  width: 100%;
+  height: 50px;
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+  display: block;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav li {
+  display: inline-block;
+  padding: 10px 5px;
+}
+
+.home-button {
+  color: #ca243f;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.home-button:hover {
+  color: #ca243f;
+  text-decoration: underline;
+}
+
+.login-button {
+  color: #ca243f;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.login-button:hover {
+  text-decoration: underline;
+}
+
+.logout-button {
+  color: #ca243f;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.logout-button:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+  flex: 1;
+}
+
+/* ============================================
+   UNIFIED H1 STYLES (All Pages)
+   ============================================ */
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+/* H1 Responsive - Desktop/4K */
+@media (min-width: 1920px) {
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 35px;
+  }
+}
+
+/* H1 Responsive - Laptop */
+@media (min-width: 992px) and (max-width: 1199px) {
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* H1 Responsive - Tablet */
+@media (min-width: 576px) and (max-width: 991px) {
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+}
+
+/* H1 Responsive - Mobile */
+@media (max-width: 575px) {
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 414px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* H1 Responsive - Landscape */
+@media (min-width: 576px) and (orientation: landscape) {
+  h1 {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 575px) and (orientation: landscape) {
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+}
+
+/* Footer bar */
+footer {
+  position: relative;
+  z-index: 2;
+
+  background-color: #ca243f;
+  color: white;
+  text-align: center;
+  padding: 16px 0;
+  width: 100%;
+  height: 50px;
+  position: relative; /* Stay in normal doc flow */
+  margin-top: 40px; /* Space before footer */
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================
+   Responsive Design - Standard Breakpoints
+   Following Bootstrap convention
+   ============================================ */
+
+/* ====================================
+   Desktop (Extra-large) - ≥ 1200px
+   Target: 1920×1080 (Full HD), 2560×1440 (QHD)
+   ==================================== */
+
+@media (min-width: 1200px) {
+  .header-container {
+    max-width: 1400px;
+    padding: 2rem 2.5rem;
+  }
+
+  .logo {
+    height: 55px;
+  }
+
+  .home-button,
+  .login-button,
+  .logout-button {
+    font-size: 20px;
+  }
+
+  header nav li {
+    padding: 12px 8px;
+  }
+
+  footer {
+    font-size: 22px;
+    padding: 18px 0;
+    height: 55px;
+  }
+}
+
+/* ====================================
+   4K and Ultra-wide - ≥ 1920px
+   ==================================== */
+
+@media (min-width: 1920px) {
+  .header-container {
+    max-width: 1600px;
+    padding: 2rem 3rem;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .home-button,
+  .login-button,
+  .logout-button {
+    font-size: 24px;
+  }
+
+  header nav li {
+    padding: 14px 10px;
+  }
+
+  footer {
+    font-size: 24px;
+    padding: 20px 0;
+    height: 60px;
+  }
+}
+
+/* ====================================
+   Laptop (Large) - 992px to 1199px
+   Target: 1280×720, 1440×900
+   ==================================== */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header-container {
+    padding: 1.8rem 2rem;
+  }
+
+  .logo {
+    height: 48px;
+  }
+
+  .home-button,
+  .login-button,
+  .logout-button {
+    font-size: 19px;
+  }
+
+  header nav li {
+    padding: 10px 6px;
+  }
+
+  footer {
+    font-size: 19px;
+    padding: 15px 0;
+    height: 48px;
+  }
+}
